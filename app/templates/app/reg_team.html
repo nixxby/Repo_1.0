@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEAM REGISTRATION</title>
+</head>
+<body>
+    <form action="{%url 'registerteam' %}" method="POST" name="frm">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><input type="text" name="team_name" required="" placeholder="TEAM NAME"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="capt_name" required="" placeholder="CAPTAIN NAME"></td>
+            </tr>
+            <tr>
+                <td><label>Select Home Ground</label>
+                    <select name = "grounds">
+                      <option value = "1">Ahmedabad</option>
+                      <option value = "2">Bangalore</option>
+                      <option value = "3">Chennai</option>
+                      <option value = "4">Delhi</option>
+                      <option value = "5">Jaipur</option>
+                      <option value = "6">Kolkata</option>
+                      <option value = "7">Mohali</option>
+                      <option value = "8">Mumbai</option>
+                    </select> </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="coach_name" required="" placeholder="COACH NAME"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="poc" required="" placeholder="CONTACT MOBILE NUMBER"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="REGISTER"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

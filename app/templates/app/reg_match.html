@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MATCH REGISTRATION</title>
+</head>
+<body>
+    <form action="{%url 'registermatch' %}" method="POST" name="frm">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><input type="date" name="match_date" required="" placeholder="MATCH DATE(mm/dd/yy)"></td>
+            </tr>
+            <tr>
+                <td><label>Select Match Ground</label>
+                    <select name = "grounds">
+                      <option value = "Ahmedabad">Ahmedabad</option>
+                      <option value = "Bangalore">Bangalore</option>
+                      <option value = "Chennai">Chennai</option>
+                      <option value = "Delhi">Delhi</option>
+                      <option value = "Jaipur">Jaipur</option>
+                      <option value = "Kolkata">Kolkata</option>
+                      <option value = "Mohali">Mohali</option>
+                      <option value = "Mumbai">Mumbai</option>
+                    </select> </td>
+            </tr>
+            <tr>
+                <td><input type="text" name="match_team1" required="" placeholder="TEAM 1"></td>
+            </tr>
+            
+            <tr>
+                <td><input type="text" name="match_team2" required="" placeholder="TEAM 2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="match_visit" required="" placeholder="NUMBER OF VISITORS"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="REGISTER"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
